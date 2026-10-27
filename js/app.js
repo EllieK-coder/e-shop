@@ -6,12 +6,17 @@ const grid = document.querySelector("#product-grid");
 
 // 2. Turn ONE product object into an HTML string
 function createProductCard(product) {
+  const stockBadge = product.inStock
+    ? '<span class="badge in-stock">In stock</span>'
+    : '<span class="badge out-of-stock">Out of stock</span>';
+  // Then the HTML template (only ${...} parts are code)
   return `
     <article class="product-card">
       <img src="${product.image}" alt="${product.name}" class="product-image">
       <div class="product-info">
         <span class="product-category">${product.category}</span>
         <h2 class="product-name">${product.name}</h2>
+        ${stockBadge}
         <p class="product-description">${product.description}</p>
         <p class="product-price">€${product.price.toFixed(2)}</p>
       </div>
