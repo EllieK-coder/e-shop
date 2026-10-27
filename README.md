@@ -1,7 +1,7 @@
 # eShop
 
-A dynamic online shop built step by step while learning JavaScript.
-It's my project for the Web Application Development course (University of West Attica).
+A dynamic online shop built step by step to practise full-stack web development:
+vanilla JavaScript first, then a PHP + MySQL back end, then a React front end.
 
 **Stack:** HTML · CSS · JavaScript · PHP · MySQL · React (bonus)
 
