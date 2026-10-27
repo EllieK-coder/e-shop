@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eShop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="logo">eShop</a>
+    <nav>
+      <a href="#">Products</a>
+      <!-- Milestone 3: the cart count badge goes here -->
+      <a href="#" class="cart-link">Cart (0)</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Products</h1>
+
+    <!-- Milestone 2: search / filter / sort controls go here -->
+
+    <!-- JavaScript fills this element with product cards -->
+    <section id="product-grid" class="product-grid"></section>
+  </main>
+
+  <footer class="footer">
+    <p>eShop · Built by Elianna Kalodimou</p>
+  </footer>
+
+  <!-- Order matters: load the data first, then the code that uses it -->
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

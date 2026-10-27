@@ -1,0 +1,78 @@
+// Product data.
+// For now it is a plain array of objects. In milestone 6 it is replaced
+// by data fetched from a PHP API (api/products.php).
+
+const products = [
+  {
+    id: 1,
+    name: "Wireless Headphones",
+    price: 59.99,
+    category: "Electronics",
+    image: "https://picsum.photos/seed/headphones/400/300",
+    description: "Over-ear Bluetooth headphones with 30h battery life.",
+    inStock: true,
+  },
+  {
+    id: 2,
+    name: "Mechanical Keyboard",
+    price: 89.5,
+    category: "Electronics",
+    image: "https://picsum.photos/seed/keyboard/400/300",
+    description: "RGB mechanical keyboard with brown switches.",
+    inStock: true,
+  },
+  {
+    id: 3,
+    name: "Cotton T-Shirt",
+    price: 14.9,
+    category: "Clothing",
+    image: "https://picsum.photos/seed/tshirt/400/300",
+    description: "Soft 100% cotton t-shirt, unisex fit.",
+    inStock: false,
+  },
+  {
+    id: 4,
+    name: "Denim Jacket",
+    price: 49.0,
+    category: "Clothing",
+    image: "https://picsum.photos/seed/jacket/400/300",
+    description: "Classic blue denim jacket.",
+    inStock: true,
+  },
+  {
+    id: 5,
+    name: "Ceramic Mug",
+    price: 8.5,
+    category: "Home",
+    image: "https://picsum.photos/seed/mug/400/300",
+    description: "350ml handmade ceramic mug.",
+    inStock: true,
+  },
+  {
+    id: 6,
+    name: "Desk Lamp",
+    price: 24.99,
+    category: "Home",
+    image: "https://picsum.photos/seed/lamp/400/300",
+    description: "LED desk lamp with adjustable brightness.",
+    inStock: true,
+  },
+  {
+    id: 7,
+    name: "JavaScript Book",
+    price: 32.0,
+    category: "Books",
+    image: "https://picsum.photos/seed/jsbook/400/300",
+    description: "A beginner-friendly guide to modern JavaScript.",
+    inStock: false,
+  },
+  {
+    id: 8,
+    name: "Notebook Set",
+    price: 11.75,
+    category: "Books",
+    image: "https://picsum.photos/seed/notebook/400/300",
+    description: "Pack of 3 dotted A5 notebooks.",
+    inStock: true,
+  },
+];
