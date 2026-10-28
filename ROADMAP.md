@@ -10,18 +10,15 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React (bonus)
 
 ## Stage 1: Vanilla JavaScript (front end only)
 
-### 1. Product card grid ⬅️ current
-- [x] Folder structure and README
+### 1. Product card grid ✅- [x] Folder structure and README
 - [x] Product data as a JS array of objects
 - [x] Render cards with JavaScript (`map` + template literals)
 - [x] Responsive CSS grid
-- [ ] Exercise: add an "In stock / Out of stock" badge
-- [ ] Exercise: format prices with `Intl.NumberFormat` (€)
-- [ ] Exercise: show a "No products found" message when the array is empty
+- [x] Exercise: add an "In stock / Out of stock" badge
+- [x] Exercise: format prices with `Intl.NumberFormat` (€)
+- [x] Exercise: show a "No products found" message when the array is empty
 
-**You learn:** arrays, objects, `map`, `join`, template literals, DOM selection, `innerHTML`
-
-### 2. Search, filter and sort
+### 2. Search, filter and sort ⬅️ current
 - [ ] Text search by product name
 - [ ] Category dropdown (built from the data, not hard-coded)
 - [ ] Sort by price (low→high, high→low) and name
