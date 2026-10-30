@@ -1,6 +1,7 @@
 // Product data (`products`) is loaded from js/products.js.
 
 const grid = document.querySelector("#product-grid");
+const searchInput = document.querySelector("#search-input");
 
 // Created once and reused, instead of building a new formatter per card.
 const priceFormatter = new Intl.NumberFormat("el-GR", {
@@ -37,3 +38,13 @@ function renderProducts(list) {
 }
 
 renderProducts(products);
+
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.trim().toLowerCase();
+
+  const results = products.filter((product) =>
+    product.name.toLowerCase().includes(query)
+  );
+
+  renderProducts(results);
+});

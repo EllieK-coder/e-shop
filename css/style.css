@@ -167,3 +167,18 @@ a {
   color: var(--color-muted);
   font-size: 0.9rem;
 }
+
+
+/* ===== Controls (search, filters) ===== */
+.controls {
+  margin-bottom: 1.5rem;
+}
+
+#search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #d0cec8;
+  border-radius: var(--radius);
+}
