@@ -2,6 +2,7 @@
 
 const grid = document.querySelector("#product-grid");
 const searchInput = document.querySelector("#search-input");
+const categorySelect = document.querySelector("#category-select");
 
 // Created once and reused, instead of building a new formatter per card.
 const priceFormatter = new Intl.NumberFormat("el-GR", {
@@ -28,6 +29,8 @@ function createProductCard(product) {
   `;
 }
 
+
+
 function renderProducts(list) {
   if (list.length === 0) {
     grid.innerHTML = '<p class="empty-message">No products found</p>';
@@ -37,14 +40,31 @@ function renderProducts(list) {
   grid.innerHTML = list.map(createProductCard).join("");
 }
 
-renderProducts(products);
 
-searchInput.addEventListener("input", () => {
+
+function fillCategoryOptions() {
+  const categories = [...new Set(products.map((product) => product.category))];
+
+  categorySelect.innerHTML += categories
+    .map((category) => `<option value="${category}">${category}</option>`)
+    .join("");
+}
+
+function applyFilters() {
   const query = searchInput.value.trim().toLowerCase();
+  const category = categorySelect.value;
 
-  const results = products.filter((product) =>
-    product.name.toLowerCase().includes(query)
-  );
+  const results = products.filter((product) => {
+    const matchesSearch = product.name.toLowerCase().includes(query);
+    const matchesCategory = category === "all" || product.category === category;
+    return matchesSearch && matchesCategory;
+  });
 
   renderProducts(results);
-});
+}
+
+fillCategoryOptions();
+renderProducts(products);
+
+searchInput.addEventListener("input", applyFilters);
+categorySelect.addEventListener("change", applyFilters);

@@ -19,7 +19,7 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React (bonus)
 - [x] Exercise: show a "No products found" message when the array is empty
 
 ### 2. Search, filter and sort ⬅️ current
-- [ ] Text search by product name
+- [x] Text search by product name
 - [ ] Category dropdown (built from the data, not hard-coded)
 - [ ] Sort by price (low→high, high→low) and name
 - [ ] Combine all three filters together
