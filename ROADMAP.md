@@ -25,7 +25,7 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React (bonus)
 - [x] Combine all three filters together
 - [x] Show "X products found"
 
-**You learn:** `filter`, `sort`, `includes`, `toLowerCase`, `input` / `change` events, re-rendering
+**I learned:** `filter`, `sort`, `includes`, `toLowerCase`, `input` / `change` events, re-rendering
 
 ### 3. Shopping cart
 - [ ] "Add to cart" button on each card
@@ -33,7 +33,7 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React (bonus)
 - [ ] Live total and cart count badge in the navbar
 - [ ] Save cart in `localStorage` (survives refresh)
 
-**You learn:** event delegation, `data-*` attributes, `find`, `reduce`, `JSON.stringify` / `JSON.parse`, state
+**I will learn:** event delegation, `data-*` attributes, `find`, `reduce`, `JSON.stringify` / `JSON.parse`, state
 
 ### 4. Form validation
 - [ ] Register form (name, email, password, confirm password)
@@ -41,7 +41,7 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React (bonus)
 - [ ] Password strength indicator
 - [ ] Reusable validation functions (for login and checkout later)
 
-**You learn:** form events, regex basics, `preventDefault`, reusable functions
+**I will learn:** form events, regex basics, `preventDefault`, reusable functions
 
 ### 5. Product details modal
 - [ ] Click a card → modal with full details
@@ -49,7 +49,7 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React (bonus)
 - [ ] Close with ✕, Escape key, or click outside
 - [ ] "Add to cart" from inside the modal
 
-**You learn:** showing/hiding UI, keyboard events, `classList`, accessibility basics
+**I will learn:** showing/hiding UI, keyboard events, `classList`, accessibility basics
 
 ---
 
@@ -63,7 +63,7 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React (bonus)
 - [ ] Replace the hard-coded array with `fetch()`
 - [ ] Loading spinner and error message
 
-**You learn:** `fetch`, `async/await`, `try/catch`, JSON APIs, PDO
+**I will learn:** `fetch`, `async/await`, `try/catch`, JSON APIs, PDO
 
 ### 7. Login / register with sessions
 - [ ] `users` table, `password_hash` / `password_verify`
@@ -71,7 +71,7 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React (bonus)
 - [ ] Navbar shows the user's name / Logout
 - [ ] Protect pages that need login
 
-**You learn:** POST requests, PHP sessions, password hashing, auth flow
+**I will learn:** POST requests, PHP sessions, password hashing, auth flow
 
 ### 8. Server-side cart and checkout
 - [ ] `cart_items`, `orders`, `order_items` tables
@@ -79,14 +79,14 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React (bonus)
 - [ ] Checkout form → creates an order
 - [ ] "My orders" page
 
-**You learn:** relational data, transactions, connecting front-end state to the back end
+**I will learn:** relational data, transactions, connecting front-end state to the back end
 
 ### 9. Pagination
 - [ ] `products.php?page=2&limit=12`
 - [ ] "Load more" button (or infinite scroll)
 - [ ] Keep filters working with pagination
 
-**You learn:** query params, `LIMIT/OFFSET`, `IntersectionObserver` (for infinite scroll)
+**I will learn:** query params, `LIMIT/OFFSET`, `IntersectionObserver` (for infinite scroll)
 
 ### 10. Admin panel
 - [ ] Admin role check
@@ -94,7 +94,7 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React (bonus)
 - [ ] Image upload
 - [ ] Orders overview
 
-**You learn:** full CRUD with fetch (POST/PUT/DELETE), file uploads, authorization
+**I will learn:** full CRUD with fetch (POST/PUT/DELETE), file uploads, authorization
 
 ---
 
@@ -105,7 +105,7 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React (bonus)
 - [ ] Components: `ProductCard`, `ProductGrid`, `CartItem`, `Cart`
 - [ ] `useState` for the cart, `useEffect` for localStorage
 
-**You learn:** components, props, state, and why React exists (compare to milestone 3)
+**I will learn:** components, props, state, and why React exists (compare to milestone 3)
 
 ### 12. React front end + PHP API
 - [ ] Fetch products from the PHP API
@@ -113,7 +113,7 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React (bonus)
 - [ ] Cart Context shared across pages
 - [ ] Connect login and checkout to PHP
 
-**You learn:** routing, Context, a full client/server app
+**I will learn:** routing, Context, a full client/server app
 
 ---
 
