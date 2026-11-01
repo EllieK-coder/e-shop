@@ -20,9 +20,9 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React (bonus)
 
 ### 2. Search, filter and sort ⬅️ current
 - [x] Text search by product name
-- [ ] Category dropdown (built from the data, not hard-coded)
-- [ ] Sort by price (low→high, high→low) and name
-- [ ] Combine all three filters together
+- [x] Category dropdown (built from the data, not hard-coded)
+- [x] Sort by price (low→high, high→low) and name
+- [x] Combine all three filters together
 - [ ] Show "X products found"
 
 **You learn:** `filter`, `sort`, `includes`, `toLowerCase`, `input` / `change` events, re-rendering
