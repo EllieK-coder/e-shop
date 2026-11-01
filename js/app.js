@@ -4,6 +4,7 @@ const grid = document.querySelector("#product-grid");
 const searchInput = document.querySelector("#search-input");
 const categorySelect = document.querySelector("#category-select");
 const sortSelect = document.querySelector("#sort-select");
+const resultsCount = document.querySelector("#results-count");
 
 // Created once and reused, instead of building a new formatter per card.
 const priceFormatter = new Intl.NumberFormat("el-GR", {
@@ -31,6 +32,8 @@ function createProductCard(product) {
 }
 
 function renderProducts(list) {
+  resultsCount.textContent = `${list.length} ${list.length === 1 ? "product" : "products"} found`;
+
   if (list.length === 0) {
     grid.innerHTML = '<p class="empty-message">No products found</p>';
     return;
@@ -83,3 +86,5 @@ renderProducts(products);
 searchInput.addEventListener("input", applyFilters);
 categorySelect.addEventListener("change", applyFilters);
 sortSelect.addEventListener("change", applyFilters);
+
+
