@@ -178,7 +178,8 @@ a {
 }
 
 #search-input,
-#category-select {
+#category-select,
+#sort-select  {
   padding: 0.6rem 1rem;
   font-size: 1rem;
   border: 1px solid #d0cec8;

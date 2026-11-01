@@ -3,6 +3,7 @@
 const grid = document.querySelector("#product-grid");
 const searchInput = document.querySelector("#search-input");
 const categorySelect = document.querySelector("#category-select");
+const sortSelect = document.querySelector("#sort-select");
 
 // Created once and reused, instead of building a new formatter per card.
 const priceFormatter = new Intl.NumberFormat("el-GR", {
@@ -29,8 +30,6 @@ function createProductCard(product) {
   `;
 }
 
-
-
 function renderProducts(list) {
   if (list.length === 0) {
     grid.innerHTML = '<p class="empty-message">No products found</p>';
@@ -40,14 +39,29 @@ function renderProducts(list) {
   grid.innerHTML = list.map(createProductCard).join("");
 }
 
-
-
 function fillCategoryOptions() {
   const categories = [...new Set(products.map((product) => product.category))];
 
   categorySelect.innerHTML += categories
     .map((category) => `<option value="${category}">${category}</option>`)
     .join("");
+}
+
+function sortProducts(list, sortBy) {
+  const sorted = [...list];
+
+  switch (sortBy) {
+    case "price-asc":
+      return sorted.sort((a, b) => a.price - b.price);
+    case "price-desc":
+      return sorted.sort((a, b) => b.price - a.price);
+    case "name-asc":
+      return sorted.sort((a, b) => a.name.localeCompare(b.name));
+    case "name-desc":
+      return sorted.sort((a, b) => b.name.localeCompare(a.name));
+    default:
+      return sorted;
+  }
 }
 
 function applyFilters() {
@@ -60,7 +74,7 @@ function applyFilters() {
     return matchesSearch && matchesCategory;
   });
 
-  renderProducts(results);
+  renderProducts(sortProducts(results, sortSelect.value));
 }
 
 fillCategoryOptions();
@@ -68,3 +82,4 @@ renderProducts(products);
 
 searchInput.addEventListener("input", applyFilters);
 categorySelect.addEventListener("change", applyFilters);
+sortSelect.addEventListener("change", applyFilters);

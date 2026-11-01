@@ -22,8 +22,13 @@
       <input type="search" id="search-input" placeholder="Search products...">
       <select id="category-select">
         <option value="all">All categories</option>
+      <select id="sort-select">
+        <option value="default">Sort: Featured</option>
+        <option value="price-asc">Price: low → high</option>
+        <option value="price-desc">Price: high → low</option>
+        <option value="name-asc">Name: A → Z</option>
+        <option value="name-desc">Name: Z → A</option>
       </select>
-    </div>
     <!-- JavaScript fills this element with product cards -->
     <section id="product-grid" class="product-grid"></section>
   </main>
