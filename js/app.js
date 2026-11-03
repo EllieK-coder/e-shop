@@ -124,3 +124,4 @@ grid.addEventListener("click", (event) => {
 
   addToCart(Number(button.dataset.id));
 });
+
