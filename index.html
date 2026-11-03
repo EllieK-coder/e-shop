@@ -11,13 +11,14 @@
     <a href="index.html" class="logo">eShop</a>
     <nav>
       <a href="#">Products</a>
-      <!-- Milestone 3: the cart count badge goes here -->
-      <a href="#" class="cart-link">Cart (0)</a>
+      <a href="#" class="cart-link">Cart (<span id="cart-count">0</span>)</a>      
     </nav>
   </header>
 
   <main class="container">
     <h1>Products</h1>
+
+    <div class="controls">
         <div class="controls">
       <input type="search" id="search-input" placeholder="Search products...">
 
@@ -35,6 +36,7 @@
     </div>
 
     <p id="results-count" class="results-count"></p>
+
     <!-- JavaScript fills this element with product cards -->
     <section id="product-grid" class="product-grid"></section>
   </main>
@@ -48,3 +50,4 @@
   <script src="js/app.js"></script>
 </body>
 </html>
+
