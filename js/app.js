@@ -17,6 +17,8 @@ const priceFormatter = new Intl.NumberFormat("el-GR", {
   currency: "EUR",
 });
 
+/* ===== Products ===== */
+
 function createProductCard(product) {
   const stockBadge = product.inStock
     ? '<span class="badge in-stock">In stock</span>'
@@ -88,46 +90,7 @@ function applyFilters() {
   renderProducts(sortProducts(results, sortSelect.value));
 }
 
-function addToCart(productId) {
-  const product = products.find((p) => p.id === productId);
-  if (!product) {
-    console.error("Product not found:", productId);
-    return;
-  }
-
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const existingItem = cart.find((item) => item.id === productId);
-
-  if (existingItem) {
-    existingItem.quantity += 1;
-  } else {
-    cart.push({ ...product, quantity: 1 });
-  }
-
-  localStorage.setItem("cart", JSON.stringify(cart));
-  updateCartCount();
-}
-
-
-
-fillCategoryOptions();
-renderProducts(products);
-updateCartCount();
-
-searchInput.addEventListener("input", applyFilters);
-categorySelect.addEventListener("change", applyFilters);
-sortSelect.addEventListener("change", applyFilters);
-
-grid.addEventListener("click", (event) => {
-  const button = event.target.closest(".add-to-cart-btn");
-  if (!button) return;
-
-  addToCart(Number(button.dataset.id));
-});
-function updateCartCount() {
-  cartCount.textContent = totalCartItems();
-}
-
+/* ===== Cart ===== */
 
 function getCart() {
   return JSON.parse(localStorage.getItem("cart")) || [];
@@ -193,6 +156,8 @@ function renderCart() {
   cartTotal.textContent = priceFormatter.format(totalCartPrice());
 }
 
+/* ===== Start ===== */
+
 fillCategoryOptions();
 renderProducts(products);
 updateCartCount();
@@ -201,11 +166,15 @@ searchInput.addEventListener("input", applyFilters);
 categorySelect.addEventListener("change", applyFilters);
 sortSelect.addEventListener("change", applyFilters);
 
+grid.addEventListener("click", (event) => {
+  const button = event.target.closest(".add-to-cart-btn");
+  if (!button) return;
 
   addToCart(Number(button.dataset.id));
+});
 
 cartLink.addEventListener("click", (event) => {
-  event.___();
-  cartPanel.classList.___("open");
+  event.preventDefault();
+  cartPanel.classList.toggle("open");
   renderCart();
 });
