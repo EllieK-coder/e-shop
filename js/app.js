@@ -177,4 +177,5 @@ cartLink.addEventListener("click", (event) => {
   event.preventDefault();
   cartPanel.classList.toggle("open");
   renderCart();
+  add renderCart();
 });
