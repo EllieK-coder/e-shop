@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register · eShop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="logo">eShop</a>
+    <nav>
+      <a href="index.html">Products</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <form id="register-form" class="form" novalidate>
+      <h1>Create an account</h1>
+
+      <div class="form-field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="name">
+        <p class="error-message" id="name-error"></p>
+      </div>
+
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="email">
+        <p class="error-message" id="email-error"></p>
+      </div>
+
+      <div class="form-field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" autocomplete="new-password">
+        <p class="error-message" id="password-error"></p>
+      </div>
+
+      <div class="form-field">
+        <label for="confirm-password">Confirm password</label>
+        <input type="password" id="confirm-password" name="confirm-password" autocomplete="new-password">
+        <p class="error-message" id="confirm-password-error"></p>
+      </div>
+
+      <button type="submit" class="submit-btn">Register</button>
+      <p class="form-success" id="form-success"></p>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <p>eShop · Built by Elianna Kalodimou</p>
+  </footer>
+
+  <script src="js/validation.js"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>
