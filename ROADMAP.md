@@ -2,15 +2,15 @@
 
 Learning JavaScript by building an eShop step by step.
 Each milestone is a small project that becomes part of the final shop.
-Tick a box when it's done and make one commit per feature.
 
-Stack: HTML, CSS, JavaScript → PHP + MySQL → React (bonus)
+Stack: HTML, CSS, JavaScript → PHP + MySQL → React
 
 ---
 
 ## Stage 1: Vanilla JavaScript (front end only)
 
-### 1. Product card grid ✅- [x] Folder structure and README
+### 1. Product card grid ✅
+- [x] Folder structure and README
 - [x] Product data as a JS array of objects
 - [x] Render cards with JavaScript (`map` + template literals)
 - [x] Responsive CSS grid
@@ -18,32 +18,34 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React (bonus)
 - [x] Exercise: format prices with `Intl.NumberFormat` (€)
 - [x] Exercise: show a "No products found" message when the array is empty
 
-### 2. Search, filter and sort ⬅️ current
+**I learned:** arrays of objects, `map`, `join`, template literals, ternaries, `Intl.NumberFormat`, DOM selection, `innerHTML`, early `return`
+
+### 2. Search, filter and sort ✅
 - [x] Text search by product name
 - [x] Category dropdown (built from the data, not hard-coded)
 - [x] Sort by price (low→high, high→low) and name
 - [x] Combine all three filters together
 - [x] Show "X products found"
 
-**I learned:** `filter`, `sort`, `includes`, `toLowerCase`, `input` / `change` events, re-rendering
+**I learned:** `filter`, `sort`, `includes`, `toLowerCase`, `Set`, `switch`, `input` / `change` events, re-rendering
 
-### 3. Shopping cart
-- [ ] "Add to cart" button on each card
-- [ ] Cart panel/sidebar with items, quantity +/−, remove
-- [ ] Live total and cart count badge in the navbar
-- [ ] Save cart in `localStorage` (survives refresh)
+### 3. Shopping cart ✅
+- [x] "Add to cart" button on each card
+- [x] Cart panel/sidebar with items, quantity +/−, remove
+- [x] Live total and cart count badge in the navbar
+- [x] Save cart in `localStorage` (survives refresh)
 
-**I will learn:** event delegation, `data-*` attributes, `find`, `reduce`, `JSON.stringify` / `JSON.parse`, state
+**I learned:** event delegation, `data-*` attributes, `find`, `reduce`, `JSON.stringify` / `JSON.parse`, state
 
-### 4. Form validation
-- [ ] Register form (name, email, password, confirm password)
-- [ ] Live validation with error messages under each field
-- [ ] Password strength indicator
-- [ ] Reusable validation functions (for login and checkout later)
+### 4. Form validation ✅
+- [x] Register form (name, email, password, confirm password)
+- [x] Live validation with error messages under each field
+- [x] Password strength indicator
+- [x] Reusable validation functions (for login and checkout later)
 
-**I will learn:** form events, regex basics, `preventDefault`, reusable functions
+**I learned:** form events, regex, `preventDefault`, `form.elements`, `Object.keys` / `Object.entries`, `classList.toggle`, reusable functions
 
-### 5. Product details modal
+### 5. Product details modal ⬅️ current
 - [ ] Click a card → modal with full details
 - [ ] Image gallery (thumbnails, next/prev)
 - [ ] Close with ✕, Escape key, or click outside
@@ -122,7 +124,8 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React (bonus)
 - [ ] Toast notifications ("Added to cart")
 - [ ] Wishlist
 - [ ] Star ratings and reviews
-- [ ] Live demo (GitHub Pages for Stage 1; a PHP host for Stage 2+)
+- [x] Live demo on GitHub Pages (Stage 1)
+- [ ] Live demo on a PHP host (Stage 2+)
 - [ ] Screenshots / GIF in the README
 
 ## Git habits

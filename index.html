@@ -20,14 +20,13 @@
     <h1>Products</h1>
 
     <div class="controls">
-        <div class="controls">
       <input type="search" id="search-input" placeholder="Search products...">
 
       <select id="category-select">
         <option value="all">All categories</option>
       </select>
 
-        <select id="sort-select">
+      <select id="sort-select">
         <option value="default">Sort: Featured</option>
         <option value="price-asc">Price: low → high</option>
         <option value="price-desc">Price: high → low</option>
@@ -37,14 +36,12 @@
     </div>
 
     <p id="results-count" class="results-count"></p>
-    </div>
-
-    <p id="results-count" class="results-count"></p>
 
     <!-- JavaScript fills this element with product cards -->
     <section id="product-grid" class="product-grid"></section>
   </main>
-    <aside id="cart-panel" class="cart-panel">
+
+  <aside id="cart-panel" class="cart-panel">
     <h2>Your cart</h2>
     <ul id="cart-items" class="cart-items"></ul>
     <p class="cart-total">Total: <strong id="cart-total">0,00 €</strong></p>
