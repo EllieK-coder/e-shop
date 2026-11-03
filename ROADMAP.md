@@ -51,7 +51,7 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React
 - [x] "Product not found" message and "Back to products" link
 - [x] "Add to cart" from the product page (shared `cart.js`)
 
-**I will learn:** URL query parameters, multi-page sites, sharing code between pages, event bubbling
+**I learned :** URL query parameters, multi-page sites, sharing code between pages, event bubbling
 
 ---
 
