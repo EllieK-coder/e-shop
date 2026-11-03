@@ -4,6 +4,7 @@ const grid = document.querySelector("#product-grid");
 const searchInput = document.querySelector("#search-input");
 const categorySelect = document.querySelector("#category-select");
 const sortSelect = document.querySelector("#sort-select");
+const resultsCount = document.querySelector("#results-count");
 
 // Created once and reused, instead of building a new formatter per card.
 const priceFormatter = new Intl.NumberFormat("el-GR", {
@@ -25,12 +26,17 @@ function createProductCard(product) {
         ${stockBadge}
         <p class="product-description">${product.description}</p>
         <p class="product-price">${priceFormatter.format(product.price)}</p>
+        <button class="add-to-cart-btn" data-id="${product.id}" ${product.inStock ? "" : "disabled"}>
+          Add to cart
+        </button>
       </div>
     </article>
   `;
 }
 
 function renderProducts(list) {
+  resultsCount.textContent = `${list.length} ${list.length === 1 ? "product" : "products"} found`;
+
   if (list.length === 0) {
     grid.innerHTML = '<p class="empty-message">No products found</p>';
     return;
@@ -77,9 +83,35 @@ function applyFilters() {
   renderProducts(sortProducts(results, sortSelect.value));
 }
 
+function addToCart(productId) {
+  const product = products.find((p) => p.id === productId);
+  if (!product) {
+    console.error("Product not found:", productId);
+    return;
+  }
+
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const existingItem = cart.find((item) => item.id === productId);
+
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cart.push({ ...product, quantity: 1 });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
 fillCategoryOptions();
 renderProducts(products);
 
 searchInput.addEventListener("input", applyFilters);
 categorySelect.addEventListener("change", applyFilters);
 sortSelect.addEventListener("change", applyFilters);
+
+grid.addEventListener("click", (event) => {
+  const button = event.target.closest(".add-to-cart-btn");
+  if (!button) return;
+
+  addToCart(Number(button.dataset.id));
+});
