@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product · eShop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="logo">eShop</a>
+    <nav>
+      <a href="index.html">Products</a>
+      <a href="register.html">Register</a>
+      <a href="#" id="cart-link" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <a href="index.html" class="back-link">← Back to products</a>
+
+    <section id="product-detail" class="product-detail">
+      <img id="product-image" class="product-detail-image" src="" alt="">
+      <div class="product-detail-info">
+        <span id="product-category" class="product-category"></span>
+        <h1 id="product-name"></h1>
+        <span id="product-stock" class="badge"></span>
+        <p id="product-description" class="product-description"></p>
+        <p id="product-price" class="product-price"></p>
+        <button id="add-to-cart-btn" class="add-to-cart-btn">Add to cart</button>
+      </div>
+    </section>
+  </main>
+
+  <aside id="cart-panel" class="cart-panel">
+    <h2>Your cart</h2>
+    <ul id="cart-items" class="cart-items"></ul>
+    <p class="cart-total">Total: <strong id="cart-total">0,00 €</strong></p>
+  </aside>
+
+  <footer class="footer">
+    <p>eShop · Built by Elianna Kalodimou</p>
+  </footer>
+
+  <!-- Order matters: data, then shared cart code, then this page's code -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

@@ -45,13 +45,13 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React
 
 **I learned:** form events, regex, `preventDefault`, `form.elements`, `Object.keys` / `Object.entries`, `classList.toggle`, reusable functions
 
-### 5. Product details modal ⬅️ current
-- [ ] Click a card → modal with full details
-- [ ] Image gallery (thumbnails, next/prev)
-- [ ] Close with ✕, Escape key, or click outside
-- [ ] "Add to cart" from inside the modal
+### 5. Product details page ⬅️ current
+- [ ] Click a card → its own page (`product.html?id=…`)
+- [ ] Read the product id from the URL with `URLSearchParams`
+- [ ] "Product not found" message and "Back to products" link
+- [ ] "Add to cart" from the product page (shared `cart.js`)
 
-**I will learn:** showing/hiding UI, keyboard events, `classList`, accessibility basics
+**I will learn:** URL query parameters, multi-page sites, sharing code between pages, event bubbling
 
 ---
 
