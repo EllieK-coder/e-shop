@@ -321,3 +321,22 @@ a {
   color: var(--color-success);
   font-weight: 600;
 }
+
+
+.strength-meter {
+  height: 6px;
+  background: #e4e2dd;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.strength-bar {
+  height: 100%;
+  width: 0;
+  transition: width 0.25s ease, background 0.25s ease;
+}
+
+.strength-label {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
