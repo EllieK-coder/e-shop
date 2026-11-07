@@ -21,16 +21,29 @@ export default function App() {
 
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
-  return (
-    <main className="container">
-      <h1>Products</h1>
-      <p>Items in cart: {totalItems}</p>
+    return (
+    <>
+      <header className="navbar">
+        <a href="/" className="logo">eShop</a>
+        <nav>
+          <a href="#">Products</a>
+          <a href="#" className="cart-link">Cart ({totalItems})</a>
+        </nav>
+      </header>
 
-      <section className="product-grid">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} onAddToCart={addToCart} />
-        ))}
-      </section>
-    </main>
+      <main className="container">
+        <h1>Products</h1>
+
+        <section className="product-grid">
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} onAddToCart={addToCart} />
+          ))}
+        </section>
+      </main>
+
+      <footer className="footer">
+        <p>eShop · Built by Elianna Kalodimou</p>
+      </footer>
+    </>
   );
 }
