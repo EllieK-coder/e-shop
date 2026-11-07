@@ -28,6 +28,22 @@ export default function App() {
     });
   }
 
+
+
+    function removeFromCart(id) {
+    setCartItems((currentCart) => currentCart.filter((item) => item.id !== id));
+  }
+
+  function changeQuantity(id, amount) {
+    setCartItems((currentCart) =>
+      currentCart
+        .map((item) =>
+          item.id === id ? { ...item, quantity: item.quantity + amount } : item
+        )
+        .filter((item) => item.quantity > 0)
+    );
+  }
+
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
@@ -58,7 +74,12 @@ export default function App() {
           ))}
         </section>
       </main>
-   <Cart items={cartItems} isOpen={isCartOpen} />
+   <Cart
+  items={cartItems}
+  isOpen={isCartOpen}
+  onChangeQuantity={changeQuantity}
+  onRemove={removeFromCart}
+/>
       <footer className="footer">
         <p>eShop · Built by Elianna Kalodimou</p>
       </footer>
