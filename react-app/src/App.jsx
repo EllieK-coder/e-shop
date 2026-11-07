@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { products } from "./products";
 import ProductCard from "./components/ProductCard";
-
 export default function App() {
-  const [cartItems, setCartItems] = useState([]);
-
+  const [cartItems, setCartItems] = useState(() => {
+    const saved = localStorage.getItem("cartItems");
+    return saved ? JSON.parse(saved) : [];
+  });
   function addToCart(product) {
     setCartItems((currentCart) => {
       const existingItem = currentCart.find((item) => item.id === product.id);
