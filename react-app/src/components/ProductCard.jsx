@@ -3,7 +3,7 @@ const priceFormatter = new Intl.NumberFormat("el-GR", {
   currency: "EUR",
 });
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, onAddToCart }) {
   return (
     <article className="product-card">
       <img src={product.image} alt={product.name} className="product-image" />
@@ -15,7 +15,11 @@ export default function ProductCard({ product }) {
         </span>
         <p className="product-description">{product.description}</p>
         <p className="product-price">{priceFormatter.format(product.price)}</p>
-        <button className="add-to-cart-btn" disabled={!product.inStock}>
+        <button
+          className="add-to-cart-btn"
+          disabled={!product.inStock}
+          onClick={() => onAddToCart(product)}
+        >
           Add to cart
         </button>
       </div>
