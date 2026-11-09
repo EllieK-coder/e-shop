@@ -103,9 +103,9 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React
 ## Stage 3: React (bonus)
 
 ### 11. Cart rebuilt in React
-- [ ] Vite + React setup
-- [ ] Components: `ProductCard`, `ProductGrid`, `CartItem`, `Cart`
-- [ ] `useState` for the cart, `useEffect` for localStorage
+- [x] Vite + React setup
+- [x] Components: `ProductCard`, `ProductGrid`, `CartItem`, `Cart`
+- [x] `useState` for the cart, `useEffect` for localStorage
 
 **I will learn:** components, props, state, and why React exists (compare to milestone 3)
 
