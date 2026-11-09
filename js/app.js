@@ -80,9 +80,20 @@ function applyFilters() {
 }
 
 /* ===== Start ===== */
+async function init() {
+  grid.innerHTML = '<p class="empty-message">Loading products…</p>';
 
-fillCategoryOptions();
-renderProducts(products);
+  try {
+    await loadProducts();
+    fillCategoryOptions();
+    renderProducts(products);
+  } catch (error) {
+    console.error(error);
+    grid.innerHTML = '<p class="empty-message">Sorry, products could not be loaded.</p>';
+  }
+}
+
+init();
 
 searchInput.addEventListener("input", applyFilters);
 categorySelect.addEventListener("change", applyFilters);
