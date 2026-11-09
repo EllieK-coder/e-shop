@@ -3,6 +3,7 @@ require __DIR__ . "/../api/db.php";
 
 // Start fresh every time this script runs.
 $pdo->exec("DROP TABLE IF EXISTS products");
+$pdo->exec("DROP TABLE IF EXISTS users");
 
 $pdo->exec("
   CREATE TABLE products (
@@ -13,6 +14,16 @@ $pdo->exec("
     image       TEXT,
     description TEXT,
     in_stock    INTEGER NOT NULL DEFAULT 1
+  )
+");
+
+$pdo->exec("
+  CREATE TABLE users (
+    id            INTEGER PRIMARY KEY AUTOINCREMENT,
+    name          TEXT NOT NULL,
+    email         TEXT NOT NULL UNIQUE,
+    password_hash TEXT NOT NULL,
+    created_at    TEXT DEFAULT CURRENT_TIMESTAMP
   )
 ");
 
@@ -36,4 +47,5 @@ foreach ($products as $product) {
   $stmt->execute($product);
 }
 
-   echo "Inserted " . count($products) . " products\n";
+echo "Created tables: products, users\n";
+echo "Inserted " . count($products) . " products\n";

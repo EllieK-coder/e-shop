@@ -69,7 +69,7 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React
 
 
 ### 7. Login / register with sessions
-- [ ] `users` table, `password_hash` / `password_verify`
+- [x] `users` table, `password_hash` / `password_verify`
 - [ ] Register and login endpoints
 - [ ] Navbar shows the user's name / Logout
 - [ ] Protect pages that need login
