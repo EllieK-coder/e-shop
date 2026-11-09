@@ -59,13 +59,6 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React
 
 > Setup: XAMPP (Apache + MySQL) or PHP's built-in server `php -S localhost:8000`
 
-### 11. Cart rebuilt in React ✅
-- [x] Vite + React setup
-- [x] Components: `ProductCard`, `Cart` (state lives in `App`)
-- [x] `useState` for the cart, `useEffect` for localStorage
-- [x] Slide-in cart panel with +/−, remove and close
-
-**I learned:** components, props, JSX, `useState`, `useEffect`, conditional rendering, lifting state up, immutable updates
 
 ### 7. Login / register with sessions
 - [ ] `users` table, `password_hash` / `password_verify`
