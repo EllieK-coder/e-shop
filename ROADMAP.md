@@ -59,8 +59,8 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React
 
 > Setup: XAMPP (Apache + MySQL) or PHP's built-in server `php -S localhost:8000`
 
-### 6. Products from a PHP API
-- [ ] MySQL `products` table and seed data
+### 6. Products from a PHP API ⬅️ current
+- [x] SQLite `products` table and seed data
 - [ ] `api/products.php` returns JSON (PDO + prepared statements)
 - [ ] Replace the hard-coded array with `fetch()`
 - [ ] Loading spinner and error message
