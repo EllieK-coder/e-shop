@@ -36,4 +36,4 @@ foreach ($products as $product) {
   $stmt->execute($product);
 }
 
-echo "Inserted " . count($products) . " products\n";C:\xampp\php\php.exe database\setup.php
+   echo "Inserted " . count($products) . " products\n";

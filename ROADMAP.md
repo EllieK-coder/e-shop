@@ -59,13 +59,14 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React
 
 > Setup: XAMPP (Apache + MySQL) or PHP's built-in server `php -S localhost:8000`
 
-### 6. Products from a PHP API ⬅️ current
+### 6. Products from a PHP API ✅ current
 - [x] SQLite `products` table and seed data
-- [ ] `api/products.php` returns JSON (PDO + prepared statements)
-- [ ] Replace the hard-coded array with `fetch()`
-- [ ] Loading spinner and error message
+- [x] `api/products.php` returns JSON (PDO + prepared statements)
+- [x] Replace the hard-coded array with `fetch()`
+- [x] Loading spinner and error message
 
-**I will learn:** `fetch`, `async/await`, `try/catch`, JSON APIs, PDO
+**I  learned :** `fetch`, `async/await`, `try/catch`, JSON APIs, PDO
+
 
 ### 7. Login / register with sessions
 - [ ] `users` table, `password_hash` / `password_verify`
@@ -102,10 +103,13 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React
 
 ## Stage 3: React (bonus)
 
-### 11. Cart rebuilt in React
+### 11. Cart rebuilt in React ✅
 - [x] Vite + React setup
-- [x] Components: `ProductCard`, `ProductGrid`, `CartItem`, `Cart`
+- [x] Components: `ProductCard`, `Cart` (state lives in `App`)
 - [x] `useState` for the cart, `useEffect` for localStorage
+- [x] Slide-in cart panel with +/−, remove and close
+
+**I learned:** components, props, JSX, `useState`, `useEffect`, conditional rendering, lifting state up, immutable updates
 
 **I will learn:** components, props, state, and why React exists (compare to milestone 3)
 
