@@ -36,4 +36,4 @@ foreach ($products as $product) {
   $stmt->execute($product);
 }
 
-echo "Inserted " . count($products) . " products\n";
+   echo "Inserted " . count($products) . " products\n";

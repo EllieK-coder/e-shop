@@ -79,6 +79,7 @@ export default function App() {
   isOpen={isCartOpen}
   onChangeQuantity={changeQuantity}
   onRemove={removeFromCart}
+  onClose={() => setIsCartOpen(false)}
 />
       <footer className="footer">
         <p>eShop · Built by Elianna Kalodimou</p>

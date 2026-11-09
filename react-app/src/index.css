@@ -340,3 +340,18 @@ a {
   font-size: 0.8rem;
   color: var(--color-muted);
 }
+
+
+.close-btn {
+  border: none;
+  background: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
