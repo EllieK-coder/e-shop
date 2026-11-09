@@ -3,12 +3,17 @@ const priceFormatter = new Intl.NumberFormat("el-GR", {
   currency: "EUR",
 });
 
-export default function Cart({ items, isOpen, onChangeQuantity, onRemove }) {
+export default function Cart({ items, isOpen, onChangeQuantity, onRemove, onClose }) {
   const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   return (
     <aside className={`cart-panel ${isOpen ? "open" : ""}`}>
-      <h2>Your cart</h2>
+      <div className="cart-header">
+        <h2>Your cart</h2>
+        <button className="close-btn" onClick={onClose} aria-label="Close cart">
+          ✕
+        </button>
+      </div>
 
       {items.length === 0 ? (
         <p>Your cart is empty.</p>
@@ -19,9 +24,9 @@ export default function Cart({ items, isOpen, onChangeQuantity, onRemove }) {
               <div>
                 <strong>{item.name}</strong>
                 <br />
-                {item.quantity} × {priceFormatter.format(item.price)}
+                {priceFormatter.format(item.price)}
               </div>
-               <div className="cart-item-controls">
+              <div className="cart-item-controls">
                 <button className="qty-btn" onClick={() => onChangeQuantity(item.id, -1)}>−</button>
                 <span>{item.quantity}</span>
                 <button className="qty-btn" onClick={() => onChangeQuantity(item.id, 1)}>+</button>
