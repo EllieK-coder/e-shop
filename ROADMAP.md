@@ -59,6 +59,14 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React
 
 > Setup: XAMPP (Apache + MySQL) or PHP's built-in server `php -S localhost:8000`
 
+### 6. Products from a PHP API ✅ current
+- [x] SQLite `products` table and seed data
+- [x] `api/products.php` returns JSON (PDO + prepared statements)
+- [x] Replace the hard-coded array with `fetch()`
+- [x] Loading spinner and error message
+
+**I  learned :** `fetch`, `async/await`, `try/catch`, JSON APIs, PDO
+
 
 ### 7. Login / register with sessions
 - [ ] `users` table, `password_hash` / `password_verify`
