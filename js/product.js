@@ -30,14 +30,25 @@ function displayProductDetails(product) {
   addToCartBtn.addEventListener("click", () => addToCart(product.id));
 }
 
-const product = products.find((p) => p.id === getProductIdFromURL());
+async function initProductPage() {
+  try {
+    await loadProducts();
 
-if (product) {
-  displayProductDetails(product);
-} else {
-  productDetail.innerHTML = `
-    <p class="empty-message">
-      Product not found. <a href="index.html">Back to products</a>
-    </p>
-  `;
+    const product = products.find((p) => p.id === getProductIdFromURL());
+
+    if (product) {
+      displayProductDetails(product);
+    } else {
+      productDetail.innerHTML = `
+        <p class="empty-message">
+          Product not found. <a href="index.html">Back to products</a>
+        </p>
+      `;
+    }
+  } catch (error) {
+    console.error(error);
+    productDetail.innerHTML = '<p class="empty-message">Sorry, this product could not be loaded.</p>';
+  }
 }
+
+initProductPage();

@@ -6,6 +6,7 @@ const cartLink = document.querySelector("#cart-link");
 const cartPanel = document.querySelector("#cart-panel");
 const cartItems = document.querySelector("#cart-items");
 const cartTotal = document.querySelector("#cart-total");
+const cartClose = document.querySelector("#cart-close");
 
 // Created once and reused, instead of building a new formatter per card.
 const priceFormatter = new Intl.NumberFormat("el-GR", {
@@ -26,7 +27,15 @@ function saveCart(cart) {
   renderCart();
 }
 
-function addToCart(productId) {
+async function addToCart(productId) {
+  // Only logged-in users can buy (uni brief).
+  const user = await getCurrentUser();
+
+  if (!user.loggedIn) {
+    window.location.href = "login.html";
+    return;
+  }
+
   const product = products.find((p) => p.id === productId);
   if (!product) {
     console.error("Product not found:", productId);
@@ -115,6 +124,9 @@ updateCartCount();
 cartLink.addEventListener("click", (event) => {
   event.preventDefault();
   cartPanel.classList.toggle("open");
+    cartClose.addEventListener("click", () => {
+    cartPanel.classList.remove("open");
+  });
   renderCart();
 });
 
