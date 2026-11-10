@@ -68,11 +68,12 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React
 **I  learned :** `fetch`, `async/await`, `try/catch`, JSON APIs, PDO
 
 
-### 7. Login / register with sessions
-- [x] `users` table, `password_hash` / `password_verify`
-- [x] Register and login endpoints
-- [ ] Navbar shows the user's name / Logout
-- [ ] Protect pages that need login
+### 6. Products from a PHP API ✅
+- [x] SQLite `products` table and seed data
+- [x] `api/products.php` returns JSON (PDO)
+- [x] Replace the hard-coded array with `fetch()`
+- [x] Loading and error messages
+- [x] Product page loads from the API too
 
 **I will learn:** POST requests, PHP sessions, password hashing, auth flow
 

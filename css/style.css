@@ -340,3 +340,18 @@ a {
   font-size: 0.8rem;
   color: var(--color-muted);
 }
+
+.form-message {
+  color: var(--color-danger);
+  font-size: 0.9rem;
+}
+
+.auth-links {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.user-name {
+  color: var(--color-muted);
+}
