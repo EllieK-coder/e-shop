@@ -59,15 +59,6 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React
 
 > Setup: XAMPP (Apache + MySQL) or PHP's built-in server `php -S localhost:8000`
 
-### 6. Products from a PHP API ✅ current
-- [x] SQLite `products` table and seed data
-- [x] `api/products.php` returns JSON (PDO + prepared statements)
-- [x] Replace the hard-coded array with `fetch()`
-- [x] Loading spinner and error message
-
-**I  learned :** `fetch`, `async/await`, `try/catch`, JSON APIs, PDO
-
-
 ### 6. Products from a PHP API ✅
 - [x] SQLite `products` table and seed data
 - [x] `api/products.php` returns JSON (PDO)
@@ -75,7 +66,16 @@ Stack: HTML, CSS, JavaScript → PHP + MySQL → React
 - [x] Loading and error messages
 - [x] Product page loads from the API too
 
-**I will learn:** POST requests, PHP sessions, password hashing, auth flow
+**I  learned :** `fetch`, `async/await`, `try/catch`, JSON APIs, PDO
+
+
+### 7. Login / register with sessions ✅
+- [x] `users` table, `password_hash` / `password_verify`
+- [x] Register and login endpoints
+- [x] Navbar shows the user's name / Logout
+- [x] Protect pages that need login
+
+**I learned:** POST requests with fetch, `php://input`, PHP sessions and cookies, `password_hash` / `password_verify`, HTTP status codes, XSS and `textContent`
 
 ### 8. Server-side cart and checkout
 - [ ] `cart_items`, `orders`, `order_items` tables

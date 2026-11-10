@@ -355,3 +355,17 @@ a {
 .user-name {
   color: var(--color-muted);
 }
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  border: none;
+  background: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: inherit;
+}
